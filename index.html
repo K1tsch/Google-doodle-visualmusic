@@ -1,0 +1,1291 @@
+<!doctype html>
+<html class="no-js" lang="">		<!--no-js 是配合 Modernizr 一起使用的类名.是告诉浏览器是否支持JavaScript，如果不支持就显示no-js，如果支持就把no-js删掉-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">	<!--X-UA-Compatible是IE8的一个专有<meta>属性。模式Edge 模式告诉 IE 以最高级模式渲染文档，也就是任何 IE 版本都以当前版本所支持的最高级标准模式渲染，避免版本升级造成的影响。简单的说，就是什么版本 IE 就用什么版本的标准模式渲染。-->
+    <title></title>
+    <meta name="description" content="">		<!--让一些搜索引擎搜索到你的网页,content里写网页描述文字-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"><!--苹果为iOS设备配备了apple-touch-icon私有属性，添加该属性，在iPhone,iPad,iTouch的safari浏览器上可以使用添加到主屏按钮将网站添加到主屏幕上，方便用户以后访问。-->
+    <!-- Place favicon.ico in the root directory -->
+</head>
+<body class="hp vasq">
+<div style="padding-top: 45px; margin-top: 0px;" id="lga">
+    <div id="dood" style="opacity: 1;">
+        <script>
+        	(function () {
+            var expids = '18167,1301795,1353207,1353383,1353763,1353803,1353968,1354037,1354465,3300103,3300131,3300164,3312895,3313275,3313321,3700265,3700347,3700433,3700442,4003510,4029370,4029815,4031109,4032677,4036527,4038214,4038394,4039268,4040138,4041776,4043492,4045096,4045293,4045841,4046904,4047140,4047454,4048347,4048980,4050750,4051887,4056126,4056682,4057323,4058016,4061666,4061980,4062724,4064468,4064796,4069829,4072126,4072270,4072364,4072777,4076096,4076999,4078430,4078588,4078763,4080760,4081039,4081165,4082131,4082230,4085472,4090550,4092182,4092628,4093133,4093136,4093524,4094039,4094543,4095910,4097153,4097469,4097922,4097928,4097951,4098096,4098733,4098739,4098751,4101750,4102109,4102238,4102827,4103469,4103475,4104037,4104202,4104527,4104620,4105085,4105113,4105116,4105122,4105124,4105178,4106647,4106817,4107094,4107395,4107410,4107420,4107555,4108124,4108371,4109092,4109293,4109316,4109490,4109528,4110086,4110380,4110656,4110931,4110938,4111692,4112164,4112280,4112284,4112295,4112319,4112332,4113492,4114606,4114876,4114975,4115082,4115436,4115479,4115516,4115697,4116247,4116350,4117129,4117161,4117264,4117535,4117730,4117912,4118164,4118167,4118227,4118475,4118575,4119040,4119128,8300551,10200083,10200096,19002486,41027342';
+            var nowOptInFlag = false;
+            window.google = window.google || {};		//对象未初始化，则初始化该对象。
+            window.google.kEXPI = window.google.kEXPI || expids;		
+            window.google.doodle = window.google.doodle || {};
+            window.google.doodle.flags = window.google.doodle.flags || {};
+            window.google.doodle.flags.nowOptIn = nowOptInFlag;		
+        })();	//立即执行函数
+        </script>
+        <span style="display:none" id="hplogoved" data-ved="0ahUKEwjf2r-bidPUAhVFGz4KHUUGBmEQNwgG"></span>	<!--data-* 属性赋予我们在所有 HTML 元素上嵌入自定义 data 属性的能力。存储的（自定义）数据能够被页面的 JavaScript 中利用，以创建更好的用户体验（不进行 Ajax 调用或服务器端数据库查询）。-->
+        <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,shrink-to-fit=no">	<!--？？为什么写在body里？？shrink-to-fit自适应宽度-->
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <div id="hplogo" tabindex="0" title="Oskar Fischinger's 117th Birthday" dir="ltr" lang="en">		<!--从左向右的文本方向。-->
+            <div id="hplogocanvasdiv">
+            </div>
+            <div id="instructions">
+                <div id="hpofquote"><q id="hpofquotetext">Music is not limited to the world of sound. There exists a
+                    music of the visual world.</q><br>—&nbsp;<cite id="hpofquotecite">Oskar Fischinger,1951</cite></div>
+                <div id="instructionscontent" style="display:none"></div>
+            </div>
+            <header id="hpofheader">
+                <div id="hpofclosewrap">
+                    <div id="hpoffullscreen" class="sprite ss-fullscreen"></div>
+                    <div id="hpofclose" class="sprite ss-close"></div>
+                </div>
+            </header>
+            <div id="changeinstrumentsinstructions" class="hide">Change Instrument</div>
+            <ul id="extracontrols" class="hidden">	<!--没用-->
+                <li id="quantize">Snap notes to beat</li>
+                <li id="constraintokey">Constrain to key</li>
+                <li id="rerecord">Re-record</li>
+            </ul>
+            <div id="controls">
+                <div id="keyboardtimeline">		<!--没用-->
+                    <canvas id="keyboardtimelinecanvas"></canvas>
+                </div>
+                <div id="grid">
+                    <canvas id="gridcanvasall"></canvas>
+                    <canvas id="gridcanvas"></canvas>
+                    <canvas id="gridoverlaycanvas"></canvas>
+                </div>
+                <div id="timeline">		<!--没用-->
+                    <canvas id="timelinecanvas"></canvas>
+                </div>
+            </div>
+            <div id="controlsui">
+                <div id="hpofshare">
+                    <div><h3 id="hpofsharetext">Share your creation</h3>
+                        <ul>
+                            <li class="hpofbutton" id="facebook_share">
+                                <div class="sprite ss-facebook"></div>
+                            </li>
+                            <li class="hpofbutton" id="twitter_share">
+                                <div class="sprite ss-twitter"></div>
+                            </li>
+                            <li class="hpofbutton" id="gplus_share">
+                                <div class="sprite ss-gplus"></div>
+                            </li>
+                            <li class="hpofbutton" id="email_share">
+                                <div class="sprite ss-email"></div>
+                            </li>
+                        </ul>
+                        <div class="sprite ss-link"></div>
+                        <input id="shortlinkurl" type="text" value="http://g.co/shortlink"></div>
+                    <div class="hpofbutton" id="newrecording">New composition</div>
+                </div>
+                <div id="gridinstrumentbutton"></div>
+                <div id="hpofsharebutton">
+                    <div class="sprite ss-share"></div>
+                </div>
+            </div>
+            <span id="loadedcount">Loading sounds...</span>
+            <ul id="introprogress">
+                <li>
+                    <div class="sprite ss-icon-0"></div>
+                </li>
+                <li>
+                    <div class="sprite ss-icon-1"></div>
+                </li>
+                <li>
+                    <div class="sprite ss-icon-2"></div>
+                </li>
+                <li>
+                    <div class="sprite ss-icon-3"></div>
+                </li>
+            </ul>
+            <div id="modifyui" class="hidden">
+                <ul id="modifyuilist">		<!--左侧的修改-->
+                    <li><label class="effectslabel">
+                        <div class="sprite ss-delay"></div>
+                        <span id="hpofdelay">Delay</span></label>
+                        <div class="checkbox"><input type="checkbox" value="1" id="delayeffecton"
+                                                     autocomplete="off"><label for="delayeffecton"></label></div>
+                    </li>
+                    <li><label class="effectslabel">
+                        <div class="sprite ss-bitcrush"></div>
+                        <span id="hpofbitcrush">BitCrush</span></label>
+                        <div class="checkbox"><input type="checkbox" value="1" id="bitcrusheffecton" autocomplete="off"><label
+                            for="bitcrusheffecton"></label></div>
+                    </li>
+                    <li><label class="effectslabel">
+                        <div class="sprite ss-phaser"></div>
+                        <span id="hpofphaser">Phaser</span></label>
+                        <div class="checkbox"><input type="checkbox" value="1" id="phasereffecton"
+                                                     autocomplete="off"><label for="phasereffecton"></label></div>
+                    </li>
+                    <li class="keysection"><label class="effectslabel">
+                        <div class="sprite ss-key"></div>
+                        <span id="hpofkeylabel">Key</span></label><select id="keyselector">
+                        <option value="0" selected="selected">C</option>
+                        <option value="1">Db</option>
+                        <option value="2">D</option>
+                        <option value="3">Eb</option>
+                        <option value="4">E</option>
+                        <option value="5">F</option>
+                        <option value="6">Gb</option>
+                        <option value="7">G</option>
+                        <option value="8">Ab</option>
+                        <option value="9">A</option>
+                        <option value="10">Bb</option>
+                        <option value="11">B</option>
+                    </select></li>
+                    <li class="temposection"><label class="effectslabel">
+                        <div class="sprite ss-tempo"></div>
+                        <span id="hpoftempo">Tempo</span></label><input id="tempoinput" type="number" min="1" max="500"
+                                                                        step="1" value="100"><input id="temposlider"
+                                                                                                    type="range" min="1"
+                                                                                                    max="500"
+                                                                                                    value="100"></li>
+                    <li class="presetssection"><label class="effectslabel">
+                        <div class="sprite ss-presets"></div>
+                        <span id="hpofpresets">Presets</span></label>
+                        <div id="preset0"
+                             source="IA0AIA0AIAIA0A0CQAQA0A0AQAQA0A0C0A0A0AQA0A0A0AQA0A0A0AQA0A0A0AQA0ACABA0g0A0A0ACABA0g0A0ABA0E0A0C0A0A0A0g0A0g0ABA0AEA0A0AIA0A0A0A123d2"
+                             class="preset"><span class="presetartist">Local Natives</span></div>
+                        <div id="preset1"
+                             source="QA0A0A0AEA0A0A0ACA0A0A0A0A0A0A0ACA0A0E0A0A0A0A0A0I0A0A0A0A0A0A0A0A0Q0A0A0A0C0EBA0A0C0E0I0A0C0EIgQA0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A49b9"
+                             class="preset"><span class="presetartist">Nick Zammuto</span></div>
+                        <div id="preset2"
+                             source="QA0A0AIAEAEA0AIAEAEA0AIAEAEA0AIA0AQAIA0AEA0A0g0A0A0A0A0ABA0A0AQA0C0B0A0E0A0C0A0E0A0I0I0Q0Q0Q0C0ABK0A0A0A0A0A0q0A0A0A0A0A0K0o0F0A100a0"
+                             class="preset"><span class="presetartist">TOKiMONSTA</span></div>
+                        <div id="preset3" source="" class="preset hidden"><span class="presetartist">User's song</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <footer id="hpoffooter" class="hidden">
+                <ul id="hpoffooterul">
+                    <li id="modifycontrols" unselectable="on">
+                        <div class="sprite ss-modify"></div>
+                        <span id="hpofmodifylabel">Modify</span></li>
+                    <li id="clearmatrix" unselectable="on">
+                        <div class="sprite ss-clear"></div>
+                        <span id="clearmatrixlabel">Clear</span></li>
+                    <li id="searchquery" unselectable="on">
+                        <div class="sprite ss-search"></div>
+                        <span id="hpofsearchlabel">Oskar Fischinger</span></li>
+                </ul>
+            </footer>
+            <div style="height:1px"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    	(function () {
+        window.google || (window.google = {});	//??
+        google.doodle || (google.doodle = {});
+        google.doodle.url = "/search?q=Oskar+Fischinger&oi=ddle&ct=oskar-fischingers-117th-birthday-5635181101711360-lawcta&hl=en";
+        google.doodle.alt = "Oskar Fischinger\'s 117th Birthday";
+        google.doodle.share = "Create visual music for Oskar Fischinger\'s 117th birthday in this #GoogleDoodle       ";
+        google.doodle.shortlink = "//g.co/doodle/4zqrkc";
+        google.doodle.gallery = "http://www.google.com/doodles/oskar-fischingers-117th-birthday?hl=en";
+        google.doodle.large_image = "{{HOMEPAGE_IMAGE_URL}}";
+        google.doodle.hl = "en";
+        google.doodle.msgs = {
+            "Button - Clear": "Clear",
+            "Button - Exit": "Exit",
+            "Button - Fullscreen": "Fullscreen",
+            "Button - Modify": "Modify",
+            "Button - Search Hover": "Search Oskar Fischinger",
+            "Email": "Email",
+            "Instruction 2": "Change Instrument",
+            "Instruction Desktop": "Click around to make your own visual music composition",
+            "Instruction Mobile": "Tap around to make your own visual music composition",
+            "Key - A": "A",
+            "Key - Ab": "Ab",
+            "Key - B": "B",
+            "Key - Bb": "Bb",
+            "Key - C": "C",
+            "Key - D": "D",
+            "Key - Db": "Db",
+            "Key - E": "E",
+            "Key - Eb": "Eb",
+            "Key - F": "F",
+            "Key - G": "G",
+            "Key - Gb": "Gb",
+            "Loading": "Loading sounds...",
+            "Modify - Bitcrush": "Bitcrush",
+            "Modify - Delay": "Delay",
+            "Modify - Key": "Key",
+            "Modify - Phaser": "Phaser",
+            "Modify - Tempo": "Tempo",
+            "Presets": "Presets",
+            "Quote": "Music is not limited to the world of sound. There exists a music of the visual world.",
+            "Quote 2": "Oskar Fischinger, 1951",
+            "Revert": "Revert",
+            "Search Query": "Oskar Fischinger",
+            "Share - Text": "Share your creation",
+            "Share - Text 2": "New Composition",
+            "Share Button": "Share",
+            "Share on Facebook": "Share on Facebook",
+            "Share on G+": "Share on G+",
+            "Share on Twitter": "Share on Twitter"
+        };
+        google.doodle.doodle_args = {};
+        if (!google.doodle || !google.doodle.loaded) {		//loaded?
+            var a = ["google", "doodle", "loaded"], b = this;
+            a[0] in b || !b.execScript || b.execScript("var " + a[0]);
+            for (var c; a.length && (c = a.shift());) {
+                var d;
+                if (d = !a.length) d = !0;
+                d ? b[c] = !0 : b[c] && b[c] !== Object.prototype[c] ? b = b[c] : b = b[c] = {}
+            }
+            var e = document.createElement("script");		 //注入脚本
+            e.src = "js/fischinger17.6.js";
+            e.async = !0;		//?
+            document.body.appendChild(e)
+        }
+        ;
+    }).call(this);</script>
+    <style type="text/css">
+    	* {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        user-select: none	/*控制页面文字不能被选中*/
+    }
+
+    body.hpofdesktop {
+        position: relative;
+        overflow: hidden
+    }
+
+    body.mobile {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        -webkit-text-size-adjust: 100%
+    }
+
+    #sdoodles, #sdoodles body, #sdoodles #hplogo {
+        width: 100%;
+        height: 100%
+    }
+
+    #hplogo {
+        font-family: 'Josefin Sans', sans-serif;
+        outline: none;
+        top: 0
+    }
+
+    #dood #hplogocanvasdiv {
+        background: url(img/bg_cta.jpg) no-repeat;
+        background-size: contain;
+        cursor: pointer
+    }
+
+    #fpdoodle #hplogocanvasdiv {
+        height: 360px;
+        width: 640px;
+        background: #000
+    }
+
+    #fpdoodle {
+        background: #000
+    }
+
+    #hplogocanvasdiv {
+        height: 220px;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        width: 600px;
+        -moz-user-select: -moz-none;
+        -ms-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-user-select: none;
+        background: url(img/bg_cta.jpg) no-repeat;
+        background-size: contain
+    }
+
+    .mobile #hplogocanvasdiv {
+        height: 100%;
+        width: 100%;
+        margin-top: 0px
+    }
+
+    #sdoodles #hplogocanvasdiv {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    #hplogocanvasdiv canvas {
+        height: 100%;
+        width: 100%
+    }
+
+    #hplogocanvasdiv.fullwindow {
+        margin: 0px
+    }
+
+    .ss-bitcrush, .ss-phaser, .ss-delay, .ss-key, .ss-presets, .ss-tempo {
+        width: 20px
+    }
+
+    .ss-close, .ss-fullscreen {
+        width: 32px
+    }
+
+    .ss-facebook, .ss-email, .ss-twitter, .ss-gplus {
+        width: 100px
+    }
+
+    .ss-icon-0, .ss-icon-1, .ss-icon-2, .ss-icon-3 {
+        width: 30px
+    }
+
+    .ss-link {
+        width: 27px
+    }
+
+    .ss-modify, .ss-clear, .ss-search {
+        width: 15px
+    }
+
+    .ss-share, .ss-sharrow {
+        width: 39px
+    }
+
+    .sprite::after {
+        content: ' ';
+        display: inline-block;
+        width: 100%;
+        height: 0;
+        padding: 0 0 100% 0;
+        background-image: url(spritesheets/cta.png)
+    }
+
+    .ss-bitcrush::after {
+        background-position: 38.7% 92.1%;
+        background-size: 1156% 861%
+    }
+
+    .ss-clear::after {
+        background-position: 99.3% 0.2%;
+        background-size: 2353% 1753%
+    }
+
+    .ss-close::after {
+        background-position: 76.9% 91.7%;
+        background-size: 1198% 892%
+    }
+
+    .ss-delay::after {
+        background-position: 90.6% 18.8%;
+        background-size: 1156% 861%
+    }
+
+    .ss-email::after {
+        background-position: 0.2% 73%;
+        background-size: 439% 327%
+    }
+
+    .ss-facebook::after {
+        background-position: 29.8% 73%;
+        background-size: 439% 327%
+    }
+
+    .ss-fullscreen::after {
+        background-position: 86.2% 91.7%;
+        background-size: 1198% 893%
+    }
+
+    .ss-gplus::after {
+        background-position: 59.5% 73%;
+        background-size: 439% 327%
+    }
+
+    .ss-icon-0::after {
+        background-position: 99.8% 18.7%;
+        background-size: 1220% 909%
+    }
+
+    .ss-icon-1::after {
+        background-position: 99.8% 31.4%;
+        background-size: 1220% 909%
+    }
+
+    .ss-icon-2::after {
+        background-position: 99.8% 43.9%;
+        background-size: 1220% 909%
+    }
+
+    .ss-icon-3::after {
+        background-position: 95.3% 91.5%;
+        background-size: 1220% 909%
+    }
+
+    .ss-key::after {
+        background-position: 48.3% 92.1%;
+        background-size: 1156% 861%
+    }
+
+    .ss-link::after {
+        background-position: 89.6% 44.8%;
+        background-size: 1318% 982%
+    }
+
+    .ss-modify::after {
+        background-position: 99.3% 6.4%;
+        background-size: 2353% 1753%
+    }
+
+    .ss-phaser::after {
+        background-position: 90.6% 32.2%;
+        background-size: 1156% 861%
+    }
+
+    .ss-presets::after {
+        background-position: 57.9% 92.2%;
+        background-size: 1156% 861%
+    }
+
+    .ss-search::after {
+        background-position: 95.9% 53.3%;
+        background-size: 2354% 1754%
+    }
+
+    .ss-share::after {
+        background-position: 26.3% 97.3%;
+        background-size: 824% 614%
+    }
+
+    .ss-sharrow::after {
+        background-position: 94.3% 0.2%;
+        background-size: 824% 614%
+    }
+
+    .ss-tempo::after {
+        background-position: 67.6% 92.2%;
+        background-size: 1156% 861%
+    }
+
+    .ss-twitter::after {
+        background-position: 89.1% 73%;
+        background-size: 439% 327%
+    }
+
+    #fischinger_quote, #instructions {
+        text-transform: uppercase;
+        position: absolute;
+        min-width: 300px;
+        width: 80%;
+        max-width: 450px;
+        font-size: 25px;
+        line-height: 40px;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-130px) scale(0.9, 0.9);
+        color: #beebf9;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 1000ms ease, transform 1000ms ease-out
+    }
+
+    .mobile #fischinger_quote, .mobile #instructions div {
+        font-size: 17px;
+        line-height: 30px;
+        min-width: 85%;
+        width: 85%
+    }
+
+    .mobile #instructions div {
+        width: 100%;
+        min-width: 100%
+    }
+
+    #loadedcount {
+        position: absolute;
+        width: 100%;
+        font-size: 14px;
+        color: #888;
+        text-align: center;
+        bottom: calc(20% + 15px);
+        text-transform: uppercase;
+        left: 0;
+        display: block;
+        opacity: 0;
+        transition: opacity 500ms ease
+    }
+
+    #loadedcount.reveal {
+        opacity: 1;
+        transition-delay: 300ms;
+        display: block
+    }
+
+    #instructions .tapinstructions {
+        font-size: 18px;
+        width: 330px
+    }
+
+    #fischinger_quote.reveal, #instructions.reveal {
+        opacity: 1;
+        transition-delay: 200ms;
+        transform: translateX(-50%) translateY(-130px) scale(1, 1);
+        display: block;
+        text-align: center
+    }
+
+    #fischinger_quote.hide, #instructions.hide {
+        opacity: 0;
+        transition-duration: 250ms;
+        transform: translateX(-50%) translateY(-130px) scale(1.5, 1.5)
+    }
+
+    #fischinger_quote q {
+        width: 100%;
+        float: left;
+        color: #beebf9;
+        quotes: "\201C" "\201D" "\2018" "\2019"
+    }
+
+    #fischinger_quote cite {
+        width: 100%;
+        float: left;
+        color: #beebf9;
+        font-size: 20px
+    }
+
+    #hpofheader, #hpoffooter {
+        position: absolute;
+        width: 100%;
+        display: auto
+    }
+
+    #hpofheader {
+        left: 0;
+        top: 0;
+        height: 55px;
+        opacity: 0
+    }
+
+    #hpofclosewrap {
+        margin-top: 10px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 100px;
+        height: 33px
+    }
+
+    #hpofclosewrap div {
+        height: 32px;
+        float: left
+    }
+
+    .mobile #hpofclosewrap {
+        width: 54px;
+        margin: 0px
+    }
+
+    .mobile #hpofclosewrap div {
+        width: 24px;
+        height: 24px;
+        float: right;
+        margin: 10px
+    }
+
+    #hpoffullscreen {
+        margin-right: 10px;
+        cursor: pointer
+    }
+
+    #hpofclose {
+        cursor: pointer
+    }
+
+    .mobile #hpoffullscreen {
+        display: none
+    }
+
+    .label {
+        text-transform: uppercase;
+        font-size: 10px;
+        color: #fff;
+        position: absolute;
+        right: 100px;
+        top: 22px
+    }
+
+    #controlsui.hpofshare #hpofshare {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+        pointer-events: auto;
+        transition-delay: 200ms
+    }
+
+    .hpofheader {
+        float: left;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: 20px
+    }
+
+    #controlsui.play #hpofshare, #controlsui.record #hpofshare {
+        opacity: 0;
+        transform: translateX(-50%) scale(0.8);
+        pointer-events: none;
+        transition-duration: 100ms
+    }
+
+    #hpofshare {
+        color: #fff;
+        text-align: left;
+        pointer-events: none;
+        position: absolute;
+        width: 300px;
+        left: 50%;
+        top: 15px;
+        font-size: 17px;
+        transform: translateX(-50%) scale(0.8);
+        opacity: 0;
+        transition: opacity 200ms ease, transform 200ms ease;
+        text-align: center;
+        text-transform: uppercase
+    }
+
+    #hpofshare h3 {
+        font-size: 17px;
+        font-weight: normal;
+        margin-bottom: 15px
+    }
+
+    #hpofshare .sprite {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        border: none
+    }
+
+    li.hpofbutton, div.hpofbutton {
+        text-transform: uppercase;
+        background: #000;
+        cursor: pointer;
+        text-align: center
+    }
+
+    div.hpofbutton:hover {
+        border: 1px solid #888
+    }
+
+    #hpofshare div, div.hpofbutton {
+        border: 1px solid #555;
+        padding: 14px 10px 12px 10px;
+        float: left;
+        margin-bottom: 20px;
+        width: 280px;
+        border-radius: 3px
+    }
+
+    #hpofshare div.ss-link {
+        width: 27px;
+        border: none;
+        margin-left: 4px;
+        position: absolute;
+        margin-top: 75px
+    }
+
+    #hpofshare li {
+        float: left;
+        width: 60px;
+        height: 60px;
+        overflow: hidden;
+        background: #333;
+        margin-left: 13px
+    }
+
+    #hpofshare input {
+        border: none;
+        width: 279px;
+        margin-left: 1px;
+        padding: 10px;
+        margin-top: 10px;
+        padding-left: 35px;
+        font-size: 14px;
+        box-sizing: border-box
+    }
+
+    #hpofshare li:first-child {
+        margin-left: 1px
+    }
+
+    #controls {
+        background: rgba(0, 0, 0, 0);
+        width: 100px;
+        height: 59px;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0px 63px;
+        transition: background 200ms ease, width 200ms ease, height 200ms ease, padding 200ms ease;
+        z-index: 1
+    }
+
+    #grid canvas, #keyboardtimelinecanvas {
+        display: none
+    }
+
+    .record #grid canvas, .record #keyboardtimelinecanvas {
+        display: block
+    }
+
+    #controlsui {
+        position: absolute;
+        transform: translateX(-50%);
+        width: calc(100px + 126px);
+        top: 0px;
+        left: 50%;
+        opacity: 1;
+        z-index: 2
+    }
+
+    #controlsui #hpofsharebutton {
+        float: right
+    }
+
+    #gridinstrumentbutton, #hpofsharebutton {
+        display: none
+    }
+
+    #controlsui.record #gridinstrumentbutton, #controlsui.record #hpofsharebutton {
+        display: block
+    }
+
+    #hpofsharebutton div {
+        width: 100%;
+        height: 100%
+    }
+
+    #controls.hpofshare {
+        background: rgba(0, 0, 0, 0.9);
+        width: 320px;
+        height: 241px;
+        padding: 10px;
+        pointer-events: auto
+    }
+
+    #controls.record {
+        background: rgba(0, 0, 0, 0.6);
+        width: 100px;
+        height: 60px;
+        padding: 0px 63px;
+        pointer-events: auto;
+        border-radius: 0px 0px 6px 6px
+    }
+
+    .mobile #controls.record {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        background: rgba(0, 0, 0, 0.3)
+    }
+
+    #controls.play {
+        background: rgba(0, 0, 0, 0.75);
+        width: 300px;
+        height: 20px;
+        padding: 0px
+    }
+
+    #controls div {
+        float: left
+    }
+
+    #timeline {
+        width: 100px;
+        height: 20px;
+        opacity: 0;
+        display: none;
+        transition: width 200ms ease, height 200ms ease, opacity 200ms ease
+    }
+
+    #timelinecanvas {
+        width: calc(100%);
+        height: 100%;
+        background-repeat: repeat-x;
+        background-size: 100% 100%;
+        float: left
+    }
+
+    #timeline.play {
+        width: 300px;
+        height: 20px;
+        opacity: 0.5
+    }
+
+    #timeline.record {
+        width: 100px;
+        height: 60px;
+        opacity: 1
+    }
+
+    #timeline.hpofshare {
+        width: 300px;
+        height: 20px;
+        opacity: 1
+    }
+
+    #timeline #timelinecanvas {
+        width: 100%
+    }
+
+    #gridinstrumentbutton, #hpofsharebutton {
+        width: 39px;
+        height: 39px;
+        padding: 0px;
+        border: 2px solid rgba(0, 0, 0, 0);
+        border-radius: 3px;
+        margin: 9px;
+        float: left;
+        color: #fff;
+        font-size: 11px;
+        line-height: 40px
+    }
+
+    #hpofsharebutton {
+        border: 2px solid #444;
+        cursor: pointer
+    }
+
+    #gridinstrumentbutton:hover, #hpofsharebutton:hover {
+        border: 2px solid #999
+    }
+
+    #gridinstrumentbutton {
+        margin-left: 12px;
+        border-color: #444;
+        background-image: url(img/icons.png);
+        background-size: 100% 156px;
+        background-repeat: repeat-y;
+        cursor: pointer
+    }
+
+    #gridinstrumentbutton.pulse {
+        animation: border-pulse 1s infinite
+    }
+
+    @keyframes border-pulse {
+        0% {
+            border-color: rgba(0, 100, 100, 40);
+        }
+        50% {
+            border-color: rgba(0, 190, 235, 249);
+        }
+        100% {
+            border-color: rgba(0, 100, 100, 40);
+        }
+    }
+
+    #gridinstrumentbutton span {
+        text-indent: -99px;
+        overflow: hidden;
+        background: #fc3737;
+        border-radius: 50%;
+        width: 90%;
+        height: 90%;
+        margin: 5%;
+        float: left;
+        transition: all 0.2s ease-in-out 0s
+    }
+
+    #introprogress {
+        display: none;
+        position: absolute;
+        bottom: 2%;
+        left: 50%;
+        width: 200px;
+        transform: translateX(-50%) translateY(-50%);
+        pointer-events: none
+    }
+
+    #introprogress li {
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+        float: left;
+        overflow: hidden;
+        transition: background 200ms ease, box-shadow 200ms ease
+    }
+
+    #introprogress canvas {
+        width: 30px;
+        height: 30px;
+        margin-top: -30px;
+        margin-left: -15px;
+        position: absolute
+    }
+
+    #introprogress div {
+        width: 100%;
+        height: 100%;
+        transform: scale(0.9, 0.9)
+    }
+
+    #introprogress li.on {
+        width: 30px;
+        height: 30px;
+        background: #00ffff;
+        border: 1px solid #beebf9;
+        box-shadow: 0px 0px 5px #fff
+    }
+
+    #hpoffooter {
+        opacity: 1;
+        width: 100%;
+        height: 50px;
+        bottom: 8px;
+        text-align: center
+    }
+
+    .mobile #hpoffooter {
+        bottom: 0px;
+        z-index: 0
+    }
+
+    .mobile #hpoffooterul.toolong span {
+        margin-left: 3px
+    }
+
+    .mobile #hpoffooterul.toolong #hpofmodifylabel, .mobile #hpoffooterul.toolong #clearmatrixlabel {
+        display: none
+    }
+
+    #hpoffooter .sprite {
+        height: 15px;
+        margin-right: 8px;
+        margin-top: -2px;
+        float: left
+    }
+
+    #hpoffooter ul {
+        display: inline-block
+    }
+
+    #hpoffooter li {
+        display: inline-block;
+        margin: 4px 10px 10px 10px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 9px 14px 7px 14px;
+        border-radius: 5px;
+        color: rgba(255, 255, 255, 0.7);
+        z-index: 999;
+        cursor: pointer
+    }
+
+    #hpoffooter li.hidden {
+        display: none
+    }
+
+    .mobile #hpoffooter li {
+        padding: 9px 5px 7px 5px;
+        margin: 2px;
+        white-space: nowrap;
+        height: 16px;
+        font-size: 14px;
+        float: left
+    }
+
+    .mobile #hpoffooter div {
+        margin-right: 3px
+    }
+
+    #hpoffooter li:hover {
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        color: rgba(255, 255, 255, 1)
+    }
+
+    .hidden {
+        display: none !important
+    }
+
+    #grid {
+        width: 100px;
+        height: 60px
+    }
+
+    #gridoverlaycanvas, #gridcanvas, #gridcanvasall {
+        width: 100%;
+        height: 100%
+    }
+
+    #gridcanvas {
+        margin-top: -60px
+    }
+
+    #gridoverlaycanvas {
+        margin-top: -60px;
+        display: none;
+        opacity: 0
+    }
+
+    #controls.record #gridoverlaycanvas {
+        opacity: 1;
+        display: block
+    }</style>
+    <style type="text/css">.keyboard #keyboardtimeline {
+        opacity: 1;
+        display: block
+    }
+
+    #keyboardtimeline {
+        position: absolute;
+        left: 63px;
+        width: 100px;
+        height: 60px;
+        opacity: 0;
+        display: none
+    }
+
+    #keyboardtimelinecanvas {
+        width: 100%;
+        height: 100%
+    }
+
+    #extracontrols {
+        position: fixed;
+        color: #fff;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%)
+    }
+
+    #extracontrols li {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        float: left;
+        padding: 10px 10px 6px 10px;
+        margin: 6px;
+        border-radius: 3px;
+        cursor: pointer
+    }
+
+    #changeinstrumentsinstructions {
+        color: #fff;
+        position: absolute;
+        width: 250px;
+        white-space: nowrap;
+        top: 24px;
+        text-align: right;
+        right: calc(50% + 115px);
+        opacity: 1;
+        margin-right: 0px;
+        visibility: visible;
+        transition: visibility 220ms ease, opacity 220ms ease, margin-right 220ms ease-out
+    }
+
+    #changeinstrumentsinstructions:after {
+        content: " \2192"
+    }
+
+    .mobile #changeinstrumentsinstructions:after {
+        content: ""
+    }
+
+    .mobile #changeinstrumentsinstructions:before {
+        content: "\2191";
+        margin-right: 5px
+    }
+
+    .mobile #changeinstrumentsinstructions {
+        font-size: 12px;
+        left: calc(50% - 83px);
+        top: 68px;
+        text-align: left
+    }
+
+    #changeinstrumentsinstructions.hide {
+        opacity: 0;
+        visibility: hidden;
+        margin-right: 20px
+    }</style>
+    <style type="text/css">#modifyui {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        color: #fff;
+        text-align: left;
+        z-index: 2
+    }
+
+    #modifyui ul {
+        position: fixed;
+        width: 220px;
+        height: 100%;
+        margin-left: 0px;
+        background: rgba(0, 0, 0, 0.8);
+        opacity: 0;
+        overflow-y: auto
+    }
+
+    #modifyuilist.show {
+        transition: all 200ms ease-out;
+        margin-left: 0px;
+        opacity: 1
+    }
+
+    #modifyuilist.hide {
+        transition: all 50ms ease-out;
+        margin-left: -40px;
+        opacity: 0
+    }
+
+    #modifyui .sprite {
+        margin: 3px;
+        width: 20px;
+        float: left
+    }
+
+    #modifyui li {
+        width: 100%;
+        clear: both;
+        padding-top: 20px;
+        float: left
+    }
+
+    #modifyui li:last-child {
+        padding-bottom: 20px
+    }
+
+    #modifyui label.effectslabel {
+        float: left;
+        width: 120px;
+        margin-left: 40px
+    }
+
+    #modifyui label.effectslabel span {
+        float: left;
+        margin-top: 7px;
+        margin-left: 0px;
+        text-transform: uppercase;
+        font-size: 12px;
+        width: 90px;
+        line-height: 14px
+    }
+
+    #modifyui #keyselector {
+        max-width: 50px;
+        margin-top: 3px;
+        background: #fff
+    }
+
+    #modifyui .presetssection label.effectslabel {
+        width: 160px
+    }
+
+    #modifyui #hpofpresets {
+        width: 130px
+    }
+
+    #modifyui .checkbox {
+        float: left;
+        width: 30px;
+        height: 30px;
+        margin-top: -3px;
+        background: #eee;
+        border-radius: 100%;
+        position: relative
+    }
+
+    #modifyui .checkbox label {
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        transition: all .15s ease;
+        cursor: pointer;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        z-index: 1;
+        background: #777;
+        box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2)
+    }
+
+    #modifyui .checkbox input[type=checkbox]:checked + label {
+        background: #00aadd
+    }
+
+    #modifyui .checkbox input[type=checkbox] {
+        visibility: hidden
+    }
+
+    input[type=range] {
+        -webkit-appearance: none;
+        background-color: silver;
+        width: 145px;
+        height: 5px;
+        margin-left: 45px;
+        margin-top: 15px;
+        box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2)
+    }
+
+    #tempoinput, li.keysection input {
+        float: left;
+        padding: 2px;
+        margin-top: 2px;
+        background: none;
+        color: #fff;
+        border: none;
+        width: 39px;
+        font-size: 15px
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        background-color: #fff;
+        opacity: 1;
+        width: 10px;
+        height: 20px;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3)
+    }
+
+    li.keysection {
+        border-top: 1px solid #999;
+        margin-bottom: 0px;
+        margin-top: 20px
+    }
+
+    li.presetssection {
+        border-top: 1px solid #999;
+        margin-top: 20px;
+        margin-bottom: 7px
+    }
+
+    li.presetssection div.preset {
+        float: left;
+        clear: both;
+        margin-left: 45px;
+        cursor: pointer
+    }
+
+    li.presetssection span.presetartist {
+        border-bottom: 1px solid #999;
+        clear: both;
+        color: #ddd;
+        float: left;
+        font-size: 15px;
+        margin-top: 18px;
+        padding: 3px
+    }
+
+    li.presetssection div.preset:hover {
+        border-bottom: 1px solid #fff;
+        color: #fff
+    }</style>
+</div>
+</body>
+</html>
